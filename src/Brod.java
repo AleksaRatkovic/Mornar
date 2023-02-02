@@ -1,2 +1,3 @@
-public class Brod {
+public abstract class Brod {
+    protected String naziv
 }

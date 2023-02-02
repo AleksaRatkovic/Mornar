@@ -11,8 +11,8 @@ public class Mornar {
         this.ime = ime;
     }
 
-    int dohvKvalitet() {return this.kvalitet;}
-    String dohvIme() {return this.ime;}
+    public int dohvKvalitet() {return this.kvalitet;}
+    public String dohvIme() {return this.ime;}
 
     @Override
     public String toString() {

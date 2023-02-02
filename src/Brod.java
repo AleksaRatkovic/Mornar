@@ -1,4 +1,5 @@
 public abstract class Brod {
+    protected String naziv;
     protected Mornar[] mornari;
     int kap, br =0;
     Mornar kapetan;

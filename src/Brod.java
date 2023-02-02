@@ -6,6 +6,7 @@ public abstract class Brod {
 
     public Brod(String n, int k, Mornar m) {
         this.naziv = n;
+        this.kap = k;
         this.mornari = new Mornar[kap];
         mornari[kapetan] = m;
         br++;
@@ -20,7 +21,7 @@ public abstract class Brod {
         if(br != kap) {
             int i =0;
             for(; i<mornari.length; i++){
-                if(mornari[i] != null) {
+                if(mornari[i] == null) {
                     mornari[i] = m;
                     br++;
                     break;
@@ -59,7 +60,7 @@ public abstract class Brod {
 
     void ukloniMornare()
     {
-        for(int i = 0; i<br; i++) mornari[i] = null;
+        for(int i = 0; i<mornari.length; i++) mornari[i] = null;
         br = 0;
     }
 
@@ -71,9 +72,11 @@ public abstract class Brod {
         int max = 0;
         for(int i =0; i<mornari.length && mornari[i] == null ;i++) {max =mornari[i].dohvKvalitet(); kapetan = i;}
         for(int i =0; i <mornari.length; i++){
-            if (mornari[i].dohvKvalitet()> max && mornari[i] != null){
-                max = mornari[i].dohvKvalitet();
-                kapetan = i;
+            if(mornari[i] != null) {
+                if (mornari[i].dohvKvalitet() > max) {
+                    max = mornari[i].dohvKvalitet();
+                    kapetan = i;
+                }
             }
         }
         br--;
@@ -89,7 +92,7 @@ public abstract class Brod {
                 obracun(b); b.ukloniMornare();
             }
             else {
-                obracun(this); ukloniMornare();
+                b.obracun(this); ukloniMornare();
             }
         }
     }
@@ -99,7 +102,7 @@ public abstract class Brod {
         for(int i =0; i < mornari.length; i++){
             if(mornari[i] != null) sum += mornari[i].dohvKvalitet();
         }
-        return sum/br;
+        return br!=0?sum/br:0;
     }
 
 

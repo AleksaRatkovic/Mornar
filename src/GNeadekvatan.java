@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class GNeadekvatan {
+public class GNeadekvatan extends Exception {
+    @Override
+    public String toString() {
+        return "Brod je neadekvatne vrste";
+    }
 }

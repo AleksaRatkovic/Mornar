@@ -2,7 +2,7 @@ public class Mornar {
     private int kvalitet;
     private String ime;
 
-    public Mornar(int k, String ime)
+    public Mornar( String ime, int k)
     {
         if(k>100) this.kvalitet = 100;
         else if(k<0) this.kvalitet = 0;

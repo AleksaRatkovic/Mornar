@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e0a57429-945b-4fbf-89b5-d53716980656" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/Brod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brod.java" afterDir="false" />
+=======
+>>>>>>> feature-mornar
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
